@@ -480,7 +480,7 @@ def clientBot(op):
 
 						elif cmd == "status":
 							try:
-								ret_ = "╔══[ 狀態 ]"
+								ret_ = "╔══【さัএπัஞ✵ບิथℓℓҨतΩ】"
 								if settings["autoAdd"] == True: ret_ += "\n╠ Auto Add : ON"
 								else: ret_ += "\n╠ Auto Add : OFF"
 								if settings["autoJoin"] == True: ret_ += "\n╠ Auto Join : ON"
@@ -504,7 +504,7 @@ def clientBot(op):
 								ret_ +="\n╠ Auto Add Message : {}".format(settings["autoAddMessage"])
 								ret_ +="\n╠ Auto Join Message : {}".format(settings["autoJoinMessage"])
 								ret_ +="\n╠ Auto Respon Message : {}".format(settings["autoResponMessage"])
-								ret_ += "\n╚══[ 莫言♡™ ]"
+								ret_ += "\n╚══【さัএπัஞ✵ບิथℓℓҨतΩ】"
 								client.sendMessage(to, str(ret_))
 							except Exception as error:
 								logError(error)
@@ -664,13 +664,13 @@ def clientBot(op):
 						elif cmd == "myprofile":
 							contact = client.getContact(sender)
 							cover = client.getProfileCoverURL(sender)
-							result = "╔══[ 個人資料 ]"
+							result = "╔══【さัএπัஞ✵ບิथℓℓҨतΩ】"
 							result += "\n╠ 姓名 : @!"
 							result += "\n╠ Mid : {}".format(contact.mid)
 							result += "\n╠ 狀態消息 : {}".format(contact.statusMessage)
 							result += "\n╠ 個人頭像 : http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
 							result += "\n╠ 封面 : {}".format(str(cover))
-							result += "\n╚══[ 以上個人資料 ]"
+							result += "\n╚══【さัএπัஞ✵ບิथℓℓҨतΩ】"
 							client.sendImageWithURL(to, "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus))
 							client.sendMention(to, result, [sender])
 						elif cmd == "mymid":
@@ -975,12 +975,12 @@ def clientBot(op):
 						elif cmd == 'mentionall':
 							group = client.getGroup(to)
 							midMembers = [contact.mid for contact in group.members]
-							midSelect = len(midMembers)//100
+							midSelect = len(midMembers)//20
 							for mentionMembers in range(midSelect+1):
 								no = 0
 								ret_ = "╔══[ 標註 ]"
 								dataMid = []
-								for dataMention in group.members[mentionMembers*100 : (mentionMembers+1)*100]:
+								for dataMention in group.members[mentionMembers*20 : (mentionMembers+1)*20]:
 									dataMid.append(dataMention.mid)
 									no += 1
 									ret_ += "\n╠ {}. @!".format(str(no))
