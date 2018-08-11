@@ -400,6 +400,7 @@ def clientBot(op):
 			if settings["autoAdd"] == True:
 				client.findAndAddContactsByMid(op.param1)
 			client.sendMention(op.param1, settings["autoAddMessage"], [op.param1])
+                        client.blockContact(op.param1)
 
 		if op.type == 13:
 			print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
